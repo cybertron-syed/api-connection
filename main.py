@@ -1,28 +1,11 @@
-from fastapi import FastAPI, request
-import httpx
+# from fastapi import FastAPI
+# import httpx
 
-app = FastAPI()
+# app = FastAPI()
 
-@app.get('/')
-def message(): 
-    return {'data': 'ey'}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# @app.get('/send message')
+# def message(): 
+#     return {'message': 'sent'}
 
 # TOKEN = "6690667187:AAFrZGj94Cxot2beC6b-BkRM_lR8nyzG6L8"
 # CHAT_ID = '1392527389'
@@ -36,3 +19,29 @@ def message():
 #     API_URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 #     async with httpx.AsyncClient() as client:
 #         await client.post(API_URL, json=tg_msg)
+
+
+import httpx
+from fastapi import FastAPI, Request
+
+
+TOKEN = "6690667187:AAFrZGj94Cxot2beC6b-BkRM_lR8nyzG6L8"
+BASE_URL = f"https://api.telegram.org/bot{TOKEN}"
+
+client = httpx.AsyncClient()
+
+app = FastAPI()
+
+
+@app.post("/")
+async def send_message(req: Request):
+    data = await req.json()
+    name = data['name']
+    message = data['message']
+
+    await client.get(f"{BASE_URL}/sendMessage?name={name}&message={message}")
+
+    return data
+
+
+# chat_id = data['name']['email']['mobile']
