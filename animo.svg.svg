@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="39.422 38.107 388.962 335.743" xmlns="http://www.w3.org/2000/svg">
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 0px; transform-origin: 165.572px 157.03px;" cx="165.572" cy="157.03" rx="107.096" ry="100.854">
+    <animateMotion path="M 0 0 L 128.253 97.898" calcMode="linear" begin="0.02s" dur="4.89s" fill="freeze" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(3, 115, 142);" cx="302.562" cy="259.527" rx="114.652" ry="109.396" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)">
+    <animateMotion path="M 0 0 L -141.13 -105.125" calcMode="linear" begin="-0.6s" dur="5.61s" fill="freeze" repeatCount="indefinite"/>
+  </ellipse>
+</svg>
